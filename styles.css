@@ -1,4 +1,3 @@
-/* Basic Reset and Body Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,124 +5,345 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    color: #1f2937;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+/* Navigation */
+#navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1e40af;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #1f2937;
+    margin: 2px 0;
+    transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: #ffffff;
+    text-align: center;
+    padding: 150px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e2e8f0;
+}
+
+/* About Section */
+.highlight-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.highlight-list li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    position: relative;
+    padding-left: 30px;
+}
+
+.highlight-list li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #1e40af;
+}
+
+/* Projects Section */
+.project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-gap: 20px; /* Spacing between sections */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-details {
+    display: none;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.project-details.active {
+    display: block;
+}
+
+.project-toggle {
+    background-color: #1e40af;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.project-toggle:hover {
+    background-color: #1e3a8a;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background-color: #1e40af;
+    color: #ffffff;
+}
+
+/* Experience Section */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #1e40af;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid #1e40af;
+}
+
+.timeline-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill-chip {
+    background-color: #1e40af;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+}
+
+.skill-chip:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #1e40af;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #1e3a8a;
+}
+
+/* Footer */
+footer {
+    background-color: #1f2937;
+    color: #ffffff;
+    text-align: center;
     padding: 20px;
 }
 
-/* Header Styles */
-h1,
-h2,
-h3 {
-    font-family: 'Georgia', serif;
-    color: #2c3e50; /* Darker color for headings */
-    font-weight: 700; /* Bold headings */
-    line-height: 1.2;
-    padding-bottom: 0.5rem;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-h1 {
-    font-size: 2.5rem;
-    text-align: left;
-    margin-bottom: 1rem;
-}
+    .nav-links.active {
+        display: flex;
+    }
 
-h2, .category-title {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 2px solid #ddd;
-}
+    .hamburger {
+        display: flex;
+    }
 
-h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-}
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 
-p {
-    margin-bottom: 1rem;
-    color: #444;
-    font-size: 1rem;
-}
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
 
-/* Section Styles */
-section {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-section:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
-/* Category Titles */
-.category-title {
-    color: #333;
-    padding: 1rem 0;
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1.5rem;
-}
-
-th, td {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #f7f7f7;
-    font-weight: 600;
-    color: #333;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* List Styles */
-ul {
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    list-style: none;
-    margin-bottom: 5px;
-}
-
-/* Contact Section Styles */
-#contact-info p {
-    margin: 5px 0;
-    line-height: 1.4;
-    color: #555;
-}
-
-/* Project section specific styling */
-.projects-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-.projects-section table {
-    margin-bottom: 1rem;
-    border-collapse: collapse;
-}
-
-.projects-section th, .projects-section td {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
+    .section {
+        padding: 50px 0;
+    }
 }
