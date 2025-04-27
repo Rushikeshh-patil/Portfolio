@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #2e7d32; /* Deep green, for buttons or highlights */
+    --secondary-color: #66bb6a; /* Softer green for gradients or secondary elements */
+    --text-color: #1b1f23; /* Very dark gray, better for eyes than pure black */
+    --background-color: #f0fdf4; /* Very light greenish background */
+    --card-background: #ffffff; /* Clean white cards */
+    --accent-color: #c8e6c9; /* Soft green-gray for accents, borders, hover states */
+    --text-light: #4b5563; /* Soft muted text for secondary info */
+    --footer-bg: #1b4332; /* Deep dark green for footers or heavy sections */
+    --white: #ffffff; /* Pure white */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +18,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8fafc;
-    color: #1f2937;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -25,7 +37,7 @@ body {
 h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--primary-color);
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -33,13 +45,13 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1f2937;
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 /* Navigation */
 #navbar {
-    background-color: #ffffff;
+    background-color: var(--white);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -58,7 +70,7 @@ h3 {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -72,13 +84,13 @@ h3 {
 
 .nav-links a {
     text-decoration: none;
-    color: #1f2937;
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #1e40af;
+    color: var(--primary-color);
 }
 
 .hamburger {
@@ -90,15 +102,15 @@ h3 {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #1f2937;
+    background-color: var(--text-color);
     margin: 2px 0;
     transition: all 0.3s;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
     text-align: center;
     padding: 150px 20px;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -113,7 +125,7 @@ h3 {
 .hero-content h2 {
     font-size: 2rem;
     font-weight: 400;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .hero-content p {
@@ -125,8 +137,8 @@ h3 {
 .cta-button {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #ffffff;
-    color: #1e40af;
+    background-color: var(--white);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
@@ -135,7 +147,7 @@ h3 {
 }
 
 .cta-button:hover {
-    background-color: #e2e8f0;
+    background-color: var(--accent-color);
 }
 
 /* About Section */
@@ -156,7 +168,7 @@ h3 {
     content: '✔';
     position: absolute;
     left: 0;
-    color: #1e40af;
+    color: var(--primary-color);
 }
 
 /* Projects Section */
@@ -167,7 +179,7 @@ h3 {
 }
 
 .project-card {
-    background-color: #ffffff;
+    background-color: var(--card-background);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -183,7 +195,7 @@ h3 {
     display: none;
     margin-top: 1rem;
     font-size: 0.95rem;
-    color: #4b5563;
+    color: var(--text-light);
 }
 
 .project-details.active {
@@ -191,8 +203,8 @@ h3 {
 }
 
 .project-toggle {
-    background-color: #1e40af;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
@@ -202,19 +214,19 @@ h3 {
 }
 
 .project-toggle:hover {
-    background-color: #1e3a8a;
+    background-color: var(--secondary-color);
 }
 
 .filter-buttons {
     text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .filter-buttons button {
     padding: 10px 20px;
     margin: 5px;
     border: none;
-    background-color: #e2e8f0;
+    background-color: var(--accent-color);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -222,8 +234,8 @@ h3 {
 
 .filter-buttons button.active,
 .filter-buttons button:hover {
-    background-color: #1e40af;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 /* Experience Section */
@@ -239,7 +251,7 @@ h3 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: #1e40af;
+    background-color: var(--primary-color);
 }
 
 .timeline-item {
@@ -255,8 +267,8 @@ h3 {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #ffffff;
-    border: 3px solid #1e40af;
+    background-color: var(--white);
+    border: 3px solid var(--primary-color);
 }
 
 .timeline-item ul {
@@ -273,8 +285,8 @@ h3 {
 }
 
 .skill-chip {
-    background-color: #1e40af;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -294,21 +306,21 @@ h3 {
     display: inline-block;
     margin: 0 10px;
     padding: 8px 16px;
-    background-color: #1e40af;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .social-icon:hover {
-    background-color: #1e3a8a;
+    background-color: var(--secondary-color);
 }
 
 /* Footer */
 footer {
-    background-color: #1f2937;
-    color: #ffffff;
+    background-color: var(--footer-bg);
+    color: var(--white);
     text-align: center;
     padding: 20px;
 }
@@ -322,7 +334,7 @@ footer {
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: #ffffff;
+        background-color: var(--white);
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
