@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dark Mode Toggle
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+        darkModeToggle.textContent = '☀️';
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+        if (body.classList.contains('dark')) {
+            darkModeToggle.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            darkModeToggle.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
     // Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');

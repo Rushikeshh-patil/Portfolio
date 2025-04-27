@@ -10,6 +10,19 @@
     --white: #ffffff; /* Pure white */
 }
 
+body.dark {
+    --primary-color: #60a5fa;
+    --secondary-color: #93c5fd;
+    --text-color: #e5e7eb;
+    --background-color: #1f2937;
+    --card-background: #374151;
+    --accent-color: #4b5563;
+    --text-light: #9ca3af;
+    --footer-bg: #111827;
+    --white: #1f2937;
+}
+
+/* Rest of the styles remain the same as before */
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +35,18 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Add a toggle button style */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 .container {
