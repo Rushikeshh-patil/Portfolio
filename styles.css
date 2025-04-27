@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333333; /* Dark gray text */
+  margin: 0;
+  padding: 30px; /* Increased padding */
+  line-height: 1.7; /* Slightly increased line height */
+}
+
+h1, h2, h3 {
+  color: #3f51b5; /* Primary color - deep blue */
+  margin-top: 25px; /* Increased top margin */
+  margin-bottom: 15px; /* Increased bottom margin */
+  font-weight: 600; /* Semi-bold */
+}
+
+h1 {
+  font-size: 3em; /* Larger size */
+  text-align: center;
+  color: #2c3e50; /* Slightly darker */
+  margin-bottom: 25px; /* Increased margin */
+  
+}
+
+h2 {
+  font-size: 2.2em; /* Larger size */
+  border-bottom: 1px solid #e0e0e0; /* Subtle border */
+  padding-bottom: 10px;
+}
+
+h2::first-letter {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.6em; /* Larger size */
+  color: #333333;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 15px; /* Increased bottom margin */
+  color: #555;
+}
+
+section {
+  margin-bottom: 40px; /* Increased margin */
+  background-color: #ffffff; /* White background */
+  padding: 30px; /* Increased padding */
+  border-radius: 8px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+/* Contact section specific styling */
+#contact-info p {
+  margin: 5px 0; /* Add a bit of space between contact details */
+  line-height: 1.4;
+}
