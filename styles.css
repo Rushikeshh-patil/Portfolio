@@ -1,85 +1,129 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
-    color: #333333;
+/* Basic Reset and Body Styles */
+* {
     margin: 0;
-    padding: 30px;
-    line-height: 1.7;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-gap: 20px; /* Spacing between sections */
+    padding: 20px;
+}
+
+/* Header Styles */
 h1,
 h2,
 h3 {
-    color: #3f51b5;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    font-weight: 600;
+    font-family: 'Georgia', serif;
+    color: #2c3e50; /* Darker color for headings */
+    font-weight: 700; /* Bold headings */
+    line-height: 1.2;
+    padding-bottom: 0.5rem;
 }
 
 h1 {
-    font-size: 3em;
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 25px;
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
-h2 {
-    font-size: 2.2em;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 10px;
-}
-
-h2::first-letter {
-    text-transform: uppercase;
+h2, .category-title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #ddd;
 }
 
 h3 {
-    font-size: 1.6em;
-    color: #333333;
-    font-weight: 500;
-}
-
-h3 {
-    font-size: 1.5em;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
 }
 
 p {
-    margin-bottom: 15px;
-    color: #555;
+    margin-bottom: 1rem;
+    color: #444;
+    font-size: 1rem;
 }
 
+/* Section Styles */
 section {
-    margin-bottom: 40px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Project section specific styling */
-#projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px;
+section:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-.project-item {
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+/* Category Titles */
+.category-title {
+    color: #333;
+    padding: 1rem 0;
 }
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f7f7f7;
+    font-weight: 600;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* List Styles */
 ul {
     padding: 0;
     margin: 0;
 }
+
 li {
     list-style: none;
     margin-bottom: 5px;
 }
 
-/* Contact section styling */
+/* Contact Section Styles */
 #contact-info p {
     margin: 5px 0;
     line-height: 1.4;
+    color: #555;
+}
+
+/* Project section specific styling */
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.projects-section table {
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.projects-section th, .projects-section td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
 }
